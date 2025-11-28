@@ -7,6 +7,7 @@ Aqui você encontra exemplos práticos de:
   - Server Side Rendering (SSR)
   - Static Site Generation (SSG)
   - Incremental Static Regeneration (ISR)
+
 Cada abordagem possui características próprias e é utilizada conforme a necessidade da aplicação.
 Abaixo está um resumo de cada uma delas.
 
