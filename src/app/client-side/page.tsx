@@ -6,10 +6,10 @@ import { TopicsList } from '@/components/topics-list';
 import { Movie } from '../types/movies';
 
 const clientSideIssues = [
-  'Potential CORS issues with some APIs',
-  'API key exposed in client-side code',
-  'Additional client-side network requests',
-  'Visible loading states',
+  'Possíveis problemas de CORS com algumas APIs',
+  'Chave de API exposta no código do lado do cliente',
+  'Requisições de rede adicionais do lado do cliente',
+  'Estados de carregamento visíveis',
 ];
 
 export default function ClientSidePage() {
@@ -28,11 +28,11 @@ export default function ClientSidePage() {
         if (data.Response === 'True') {
           setMovies(data.Search);
         } else {
-          setError(data.Error || 'Failed to fetch movies');
+          setError(data.Error || 'Não foi possível obter os filmes.');
         }
       } catch (error) {
         setError(
-          'Error fetching movies: This demonstrates potential CORS issues when fetching directly from client-side!'
+          'Erro ao buscar filmes: Isso demonstra possíveis problemas de CORS ao buscar diretamente do lado do cliente!'
         );
       } finally {
         setIsLoading(false);
@@ -44,20 +44,17 @@ export default function ClientSidePage() {
 
   return (
     <div className="p-8">
-      <h1 className="text-2xl font-bold mb-4">Client-side Data Fetching</h1>
+      <h1 className="text-2xl font-bold mb-4">Obtenção de dados no lado do cliente</h1>
 
       <TopicsList
         title="Traditional React approach using useEffect and useState. Issues to note:"
         topics={clientSideIssues}
       />
 
-      {isLoading ? (
-        <div>Loading movies...</div>
-      ) : error ? (
-        <div className="text-red-500 p-4 border border-red-200 rounded-lg bg-red-50">{error}</div>
-      ) : (
-        <MovieGrid movies={movies} />
-      )}
+      {isLoading && <div>Loading movies...</div>}
+      {!isLoading && !error && <MovieGrid movies={movies} />}
+      {!isLoading && error && <div className="text-red-500">{error}</div>}
+
     </div>
   );
 }

@@ -17,7 +17,7 @@ export const MovieService = {
     options = { revalidate: 60 }
   }: GetAllParams = {}): Promise<Movie[]> {
     const response = await fetch(
-      `http://www.omdbapi.com/?s=${searchTerm}&apikey=${process.env.OMDB_API_KEY}`,
+      `http://www.omdbapi.com/?s=${searchTerm}&apikey=${process.env.NEXT_PUBLIC_OMDB_API_KEY}`,
       {
         next: {
           revalidate: options.revalidate,

@@ -3,10 +3,10 @@ import { TopicsList } from '@/components/topics-list';
 import { MovieService } from '@/services/movie-service';
 
 const serverBenefits = [
-  'Data is fetched on the server',
-  'No loading state needed (server wait)',
-  'Better SEO (data is included in initial HTML)',
-  'Automatic data caching',
+  'Os dados são obtidos no servidor',
+  'Não é necessário estado de carregamento (espera do servidor)',
+  'Melhor SEO (os dados são incluídos no HTML inicial)',
+  'Cache de dados automático',
 ];
 
 export default async function ServerSidePage() {
@@ -18,10 +18,10 @@ export default async function ServerSidePage() {
 
   return (
     <div className="p-8">
-      <h1 className="text-2xl font-bold mb-4">Server-side Rendering</h1>
+      <h1 className="text-2xl font-bold mb-4">Renderização do lado do servidor</h1>
 
       <TopicsList
-        title="Next.js App Router server components approach. Benefits:"
+        title="Abordagem dos componentes de servidor do Next.js App Router. Benefícios:"
         topics={serverBenefits}
       />
 

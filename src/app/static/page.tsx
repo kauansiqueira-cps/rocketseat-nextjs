@@ -3,11 +3,11 @@ import { TopicsList } from '@/components/topics-list';
 import { MovieService } from '@/services/movie-service';
 
 const staticBenefits = [
-  'Pages are generated at build time',
-  'Fastest possible page loads',
-  'Perfect for SEO',
-  "Great for content that doesn't change often",
-  'Can be revalidated with ISR (Incremental Static Regeneration)',
+  'As páginas são geradas durante a compilação',
+  'Carregamento de páginas o mais rápido possível',
+  'Perfeito para SEO(Search Engine Optimization)',
+  'Ótimo para conteúdo que não muda com frequência',
+  'Pode ser revalidado com ISR (Regeneração Estática Incremental)',
 ];
 
 export default async function StaticPage() {
@@ -19,9 +19,9 @@ export default async function StaticPage() {
 
   return (
     <div className="p-8">
-      <h1 className="text-2xl font-bold mb-4">Static Site Generation</h1>
+      <h1 className="text-2xl font-bold mb-4">Geração de Sites Estáticos</h1>
 
-      <TopicsList title="Next.js static generation approach. Benefits:" topics={staticBenefits} />
+      <TopicsList title="Abordagem de geração estática do Next.js. Benefícios:" topics={staticBenefits} />
 
       <MovieGrid movies={movies} />
     </div>
