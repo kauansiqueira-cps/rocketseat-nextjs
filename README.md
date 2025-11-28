@@ -16,11 +16,11 @@ O servidor envia apenas um HTML básico.
 O JavaScript é carregado e então busca os dados necessários.
 A página só aparece completamente após o JavaScript executar.
 
-# Vantagens
+### Vantagens
 Altamente interativo.
 Ideal para dashboards, apps com muita lógica no cliente e interfaces dinâmicas.
 
-# Desvantagens
+### Desvantagens
 Tela inicial em branco até o JS carregar.
 SEO prejudicado, pois o conteúdo não vem pronto no HTML.
 
@@ -30,11 +30,11 @@ O usuário recebe um HTML completo logo no primeiro carregamento.
 Funciona mesmo com JavaScript desativado.
 Melhora SEO e tempo de percepção de carregamento.
 
-# Vantagens
+### Vantagens
 Conteúdo visível imediatamente.
 Melhor indexação em mecanismos de busca.
 
-# Desvantagens
+### Desvantagens
 Maior custo no servidor, pois cada acesso gera uma renderização.
 Pode ser mais lento em páginas muito acessadas.
 
@@ -44,11 +44,11 @@ As páginas são pré-renderizadas e servidas diretamente por uma CDN.
 Extremamente rápido e barato.
 Ideal para conteúdo pouco dinâmico.
 
-# Vantagens
+### Vantagens
 Desempenho máximo.
 Custo muito baixo, praticamente zero de processamento por acesso.
 
-# Desvantagens
+### Desvantagens
 Requer rebuild para atualizar conteúdos.
 Não é ideal para dados que mudam constantemente.
 
@@ -58,11 +58,11 @@ Você define um tempo de revalidação (ex.: 60s).
 Dentro desse período, todos os usuários recebem a mesma versão em cache.
 Após o tempo expirar, o Next.js recria a página em background e atualiza o cache para todos.
 
-# Vantagens
+### Vantagens
 Conteúdo estático com atualização automática.
 Escalabilidade muito alta.
 
-# Desvantagens
+### Desvantagens
 Atualização não é imediata (depende do tempo de revalidação).
 Requer infraestrutura de CDN compatível.
 
